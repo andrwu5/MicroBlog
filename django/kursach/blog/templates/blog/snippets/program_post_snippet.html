@@ -1,0 +1,26 @@
+<style type="text/css">
+	.card{
+		max-width: 700px;
+	}
+	.card-body{
+		padding: 20px;
+	}
+</style>
+
+<div class="container">
+	<div class="row">
+
+		<!-- Blog Post -->
+		<div class="card m-auto">
+			<div class="card-body mt-2 mb-2">
+				<h2 class="card-title">{{program_post.title}}</h2>
+                <img class="card-img-top" src="{{program_post.image.url}}">
+				<p class="card-text">{{program_post.body|safe|truncatechars:180}}</p>
+				<a href="{{program_post.document.url}}" download="{{program_post.document.url}}">Скачать</a>
+			</div>
+            <div class="card-footer text-muted">
+			  добавлен {{program_post.date_updated}} {{program_post.author}}
+			</div>
+		</div>
+	</div>
+</div>
